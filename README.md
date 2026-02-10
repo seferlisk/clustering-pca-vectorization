@@ -23,6 +23,22 @@ ml_clustering_project/
 │   ├── clustering.py      # Clustering algorithm implementations
 │   ├── evaluation.py      # Performance metrics & result storage
 │   └── visualizer.py      # PCA, t-SNE, and Plotting
-├── data/                  # Local datasets (e.g., bbc-text.csv)
+├── Datasets/              # Local datasets (e.g., bbc-text.csv)
 ├── outputs/               # Generated plots and results.csv
 └── main.py                # Pipeline entry point
+```
+---
+
+## 📊 Evaluation Metrics
+We use a blend of external and internal metrics to judge cluster quality:
+
+![eval_metrics.png](eval_metrics.png)
+
+---
+## 🛠️ Setup & Usage
+
+1. Install Dependencies:
+```commandline
+pip install requirements.txt
+```
+2. Data Placement: Ensure your local bbc-text.csv is located in the Datasets/ folder.
