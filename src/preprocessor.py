@@ -6,6 +6,7 @@ import nltk
 
 # Ensuring necessary NLTK resources are available
 nltk.download('punkt')
+nltk.download('punkt_tab')
 nltk.download('stopwords')
 
 class TextPreprocessor:
