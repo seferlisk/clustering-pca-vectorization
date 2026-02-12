@@ -8,6 +8,9 @@ from src import (
 
 def run_experiment():
     # 1. Initialization
+
+    # Create output directories if they don't exist
+    os.makedirs("outputs/plots", exist_ok=True)
     bbc_path = 'Datasets/bbc_news_test.csv'
     db_manager = DatasetManager(bbc_path)
     embed_engine = EmbeddingEngine(vector_size=100)
@@ -66,11 +69,11 @@ def run_experiment():
     print("\nFinal Performance Summary:")
     print(final_df)
 
-    # Generate overall comparison plot
-    viz.plot_comparison(final_df, metric="NMI")
+    # Plot all metrics side-by-side
+    viz.plot_comparison_metrics(final_df, metrics=["NMI", "ARI", "AMI", "Silhouette"])
 
+    # # Generate overall comparison plot
+    # viz.plot_comparison(final_df, metric="NMI")
 
 if __name__ == "__main__":
-    # Create output directories if they don't exist
-    os.makedirs("outputs/plots", exist_ok=True)
     run_experiment()
