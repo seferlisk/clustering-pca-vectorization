@@ -5,7 +5,6 @@ from src import (
     ClusterEvaluator, ResultStore, Visualizer
 )
 
-
 def run_experiment():
     # 1. Initialization
 
